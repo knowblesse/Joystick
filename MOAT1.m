@@ -20,6 +20,12 @@ close all;
 rng('shuffle')
 Screen('Preference', 'SkipSyncTests', 1);
 
+%% Joystick Setup
+joy = vrjoystick(1);
+
+
+%% Exp
+
 subj = input('subject number: ');
 
 bgcolor=[0 0 0];
@@ -125,6 +131,7 @@ list(1:350, 29:40)=0;
 % end
 
 trialorder=[1 2];
+joystickResponse = cell(numel(trialorder),1);
 
 %%% experiment
 for trial=trialorder
@@ -237,8 +244,25 @@ for trial=trialorder
     %% Response
 
     tic;% begin tic-toc-toc-toc-toc
+    lastResponseSaveTime = 0;
+    joystickResponseSaveInterval = 0.05; % save joystick info every this seconds.
+    maxJoystickResponseSaveTime = 20;
+    joystickResponse{trial} = zeros(maxJoystickResponseSaveTime / joystickResponseSaveInterval, 3); % timestamp, response
+    joystickResponseIndex = 1;
 
     while list(trial,29)*list(trial,31)*list(trial,33)* list(trial,35)==0 %until four responses
+        
+        if cputime > lastResponseSaveTime + joystickResponseSaveInterval
+            x = axis(joy, 1);
+            y = -axis(joy, 2);
+            [theta, rho] = cart2pol(x,y);
+            lastResponseSaveTime = cputime;
+            joystickResponse{trial}(joystickResponseIndex, 1) = lastResponseSaveTime;
+            joystickResponse{trial}(joystickResponseIndex, 2) = theta;
+            joystickResponse{trial}(joystickResponseIndex, 3) = rho;
+            joystickResponseIndex = joystickResponseIndex + 1;
+        end
+
         [keyIsDown, secs, keyCode]=KbCheck;
         if keyIsDown  %1st response identity (1~4)
             if  list(trial,29)==0
