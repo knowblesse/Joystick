@@ -141,78 +141,78 @@ for trial=trialorder
     %     KbWait;
     % end
 
-    if trial==1
-        myimgfile='RR.jpg';
-        ima=imread(myimgfile, 'jpg');
-        Screen('PutImage', w, ima); % put image on screen
-        Screen('Flip',w); % now visible on screen
-        WaitSecs(1);
-        KbWait;
-    end
-
-
-    if trial==241
-        myimgfile='RR.jpg';
-        ima=imread(myimgfile, 'jpg');
-        Screen('PutImage', w, ima); % put image on screen
-        Screen('Flip',w); % now visible on screen
-        WaitSecs(1);
-        KbWait;
-    end
-
-    if trial==61
-        myimgfile='RL.jpg';
-        ima=imread(myimgfile, 'jpg');
-        Screen('PutImage', w, ima); % put image on screen
-        Screen('Flip',w); % now visible on screen
-        WaitSecs(1);
-        KbWait;
-    end
-
-    if trial==251
-        myimgfile='RL.jpg';
-        ima=imread(myimgfile, 'jpg');
-        Screen('PutImage', w, ima); % put image on screen
-        Screen('Flip',w); % now visible on screen
-        WaitSecs(1);
-        KbWait;
-    end
-
-    if trial==121
-        myimgfile='LL.jpg';
-        ima=imread(myimgfile, 'jpg');
-        Screen('PutImage', w, ima); % put image on screen
-        Screen('Flip',w); % now visible on screen
-        WaitSecs(1);
-        KbWait;
-    end
-
-    if trial==261
-        myimgfile='LL.jpg';
-        ima=imread(myimgfile, 'jpg');
-        Screen('PutImage', w, ima); % put image on screen
-        Screen('Flip',w); % now visible on screen
-        WaitSecs(1);
-        KbWait;
-    end
-
-    if trial==181
-        myimgfile='LR.jpg';
-        ima=imread(myimgfile, 'jpg');
-        Screen('PutImage', w, ima); % put image on screen
-        Screen('Flip',w); % now visible on screen
-        WaitSecs(1);
-        KbWait;
-    end
-
-    if trial==271
-        myimgfile='LR.jpg';
-        ima=imread(myimgfile, 'jpg');
-        Screen('PutImage', w, ima); % put image on screen
-        Screen('Flip',w); % now visible on screen
-        WaitSecs(1);
-        KbWait;
-    end
+%     if trial==1
+%         myimgfile='RR.jpg';
+%         ima=imread(myimgfile, 'jpg');
+%         Screen('PutImage', w, ima); % put image on screen
+%         Screen('Flip',w); % now visible on screen
+%         WaitSecs(1);
+%         KbWait;
+%     end
+% 
+% 
+%     if trial==241
+%         myimgfile='RR.jpg';
+%         ima=imread(myimgfile, 'jpg');
+%         Screen('PutImage', w, ima); % put image on screen
+%         Screen('Flip',w); % now visible on screen
+%         WaitSecs(1);
+%         KbWait;
+%     end
+% 
+%     if trial==61
+%         myimgfile='RL.jpg';
+%         ima=imread(myimgfile, 'jpg');
+%         Screen('PutImage', w, ima); % put image on screen
+%         Screen('Flip',w); % now visible on screen
+%         WaitSecs(1);
+%         KbWait;
+%     end
+% 
+%     if trial==251
+%         myimgfile='RL.jpg';
+%         ima=imread(myimgfile, 'jpg');
+%         Screen('PutImage', w, ima); % put image on screen
+%         Screen('Flip',w); % now visible on screen
+%         WaitSecs(1);
+%         KbWait;
+%     end
+% 
+%     if trial==121
+%         myimgfile='LL.jpg';
+%         ima=imread(myimgfile, 'jpg');
+%         Screen('PutImage', w, ima); % put image on screen
+%         Screen('Flip',w); % now visible on screen
+%         WaitSecs(1);
+%         KbWait;
+%     end
+% 
+%     if trial==261
+%         myimgfile='LL.jpg';
+%         ima=imread(myimgfile, 'jpg');
+%         Screen('PutImage', w, ima); % put image on screen
+%         Screen('Flip',w); % now visible on screen
+%         WaitSecs(1);
+%         KbWait;
+%     end
+% 
+%     if trial==181
+%         myimgfile='LR.jpg';
+%         ima=imread(myimgfile, 'jpg');
+%         Screen('PutImage', w, ima); % put image on screen
+%         Screen('Flip',w); % now visible on screen
+%         WaitSecs(1);
+%         KbWait;
+%     end
+% 
+%     if trial==271
+%         myimgfile='LR.jpg';
+%         ima=imread(myimgfile, 'jpg');
+%         Screen('PutImage', w, ima); % put image on screen
+%         Screen('Flip',w); % now visible on screen
+%         WaitSecs(1);
+%         KbWait;
+%     end
     %% Blank Display
     Screen('Flip', w);
     WaitSecs(.5);
